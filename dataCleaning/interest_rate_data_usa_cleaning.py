@@ -19,18 +19,17 @@ interest_rate_dictionary_count = {}
 interest_rate_dictionary_average = {}
 
 # populate interest rate dictionary sum and count variants
-for row in range(len(data_list)):
+for row in range(1, len(data_list)):
     effective_federal_funds_rate = 6
     year = 0
 
-    if (row != 0):
-        if (data_list[row][effective_federal_funds_rate] != ''):
-            if data_list[row][year] not in interest_rate_dictionary_sum: 
-                interest_rate_dictionary_sum[data_list[row][year]] = float(data_list[row][effective_federal_funds_rate])
-                interest_rate_dictionary_count[data_list[row][year]] = 1
-            else:
-                interest_rate_dictionary_sum[data_list[row][year]] += float(data_list[row][effective_federal_funds_rate])
-                interest_rate_dictionary_count[data_list[row][year]] += 1
+    if (data_list[row][effective_federal_funds_rate] != ''):
+        if data_list[row][year] not in interest_rate_dictionary_sum: 
+            interest_rate_dictionary_sum[data_list[row][year]] = float(data_list[row][effective_federal_funds_rate])
+            interest_rate_dictionary_count[data_list[row][year]] = 1
+        else:
+            interest_rate_dictionary_sum[data_list[row][year]] += float(data_list[row][effective_federal_funds_rate])
+            interest_rate_dictionary_count[data_list[row][year]] += 1
 
 # populate interest rate dictionary average variant
 for key in interest_rate_dictionary_count:
