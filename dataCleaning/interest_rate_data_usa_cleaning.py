@@ -1,4 +1,6 @@
+# general imports
 import csv
+
 # google colab import
 # import matplotlib.pyplot as plt
 
@@ -35,12 +37,15 @@ for row in range(1, len(data_list)):
 for key in interest_rate_dictionary_count:
     interest_rate_dictionary_average[key] = interest_rate_dictionary_sum.get(key) / interest_rate_dictionary_count.get(key)
 
+def get_cleaned_interest_rate_data():
+    return interest_rate_dictionary_average
+
 # testing
-print(interest_rate_dictionary_sum)
-print("Separator")
-print(interest_rate_dictionary_count)
-print("Separator")
-print(interest_rate_dictionary_average)
+# print(interest_rate_dictionary_sum)
+# print("Separator")
+# print(interest_rate_dictionary_count)
+# print("Separator")
+# print(interest_rate_dictionary_average)
 
 # visualization in google colab
 # names = list(interest_rate_dictionary_average.keys())

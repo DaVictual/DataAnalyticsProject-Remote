@@ -1,4 +1,8 @@
+#general imports
 import csv
+
+# google colab import
+# import matplotlib.pyplot as plt
 
 #open csv file
 total_cpi_per_year_usa = open("total_cpi_per_year_usa.csv", "r")
@@ -50,8 +54,11 @@ for key in years_to_keep:
 
 # populate cpi dictionary inflation year over year 1954 to 2017 variant
 for i in range(1, len(years_to_keep)):
-    cpi_dictionary_inflation_year_over_year_1954_to_2017[years_to_keep[i]] = (((cpi_dictionary_average_1954_to_2017.get(years_to_keep[i]) / cpi_dictionary_average_1954_to_2017.get(years_to_keep[i-1])) - 1) * 100)
+    cpi_dictionary_inflation_year_over_year_1954_to_2017[str(int(float(years_to_keep[i])))] = (((cpi_dictionary_average_1954_to_2017.get(years_to_keep[i]) / cpi_dictionary_average_1954_to_2017.get(years_to_keep[i-1])) - 1) * 100)
 
+
+def get_cleaned_cpi_data():
+    return cpi_dictionary_inflation_year_over_year_1954_to_2017
 # testing
 # print(cpi_dictionary_average)
 # print("separator")
