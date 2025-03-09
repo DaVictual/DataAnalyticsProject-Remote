@@ -5,7 +5,7 @@ import csv
 # import matplotlib.pyplot as plt
 
 # open csv file
-interest_rate_data_usa_csv_file = open("interest_rate_data_usa.csv", "r")
+interest_rate_data_usa_csv_file = open("csvFiles/interest_rate_data_usa.csv", "r")
 
 # create reader object for the csv file
 interest_rate_data_usa_csv_reader = csv.reader(interest_rate_data_usa_csv_file)

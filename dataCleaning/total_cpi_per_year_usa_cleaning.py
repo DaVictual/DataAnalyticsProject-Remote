@@ -5,7 +5,7 @@ import csv
 # import matplotlib.pyplot as plt
 
 #open csv file
-total_cpi_per_year_usa = open("total_cpi_per_year_usa.csv", "r")
+total_cpi_per_year_usa = open("csvFiles/total_cpi_per_year_usa.csv", "r")
 
 #create a reader object for the csv file
 total_cpi_per_year_usa = csv.reader(total_cpi_per_year_usa)
