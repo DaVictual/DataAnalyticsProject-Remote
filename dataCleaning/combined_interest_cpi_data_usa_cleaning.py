@@ -20,7 +20,10 @@ for key in cleaned_inflation_year_over_year_data_1954_to_2017:
 df = pd.DataFrame.from_dict(data = combined_cleaned_interest_inflation_data_1954_to_2017, orient="index", columns=["interest_rate", "inflation"])
 df.reset_index(inplace=True)
 df.rename(columns={"index":"year"}, inplace=True)
-print(df)
+
+def get_dataframe():
+    return df
+# print(df)
 
 # df.to_csv("interest_rate_and_inflation_data_1954_to_2017.csv", index=False)
 

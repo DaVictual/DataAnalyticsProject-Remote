@@ -56,6 +56,13 @@ for key in years_to_keep:
 for i in range(1, len(years_to_keep)):
     cpi_dictionary_inflation_year_over_year_1954_to_2017[str(int(float(years_to_keep[i])))] = (((cpi_dictionary_average_1954_to_2017.get(years_to_keep[i]) / cpi_dictionary_average_1954_to_2017.get(years_to_keep[i-1])) - 1) * 100)
 
+dictionary = {}
+
+for key in cpi_dictionary_inflation_year_over_year_1954_to_2017:
+    if int(key)+1 < 2018:
+        dictionary[key] = cpi_dictionary_inflation_year_over_year_1954_to_2017.get(str(int(key)+1))
+    else:
+        dictionary[key] = 2.43899951453
 
 def get_cleaned_cpi_data():
     return cpi_dictionary_inflation_year_over_year_1954_to_2017
@@ -64,5 +71,6 @@ def get_cleaned_cpi_data():
 # print("separator")
 # print(cpi_dictionary_average_1954_to_2017)
 # print(cpi_dictionary_inflation_year_over_year_1954_to_2017)
+# print(dictionary)
 
 
