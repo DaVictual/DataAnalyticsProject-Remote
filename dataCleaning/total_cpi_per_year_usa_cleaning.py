@@ -57,14 +57,14 @@ cpi_dictionary_inflation_year_over_year_1955_to_2018 = {}
 
 for key in cpi_dictionary_inflation_year_over_year_1954_to_2017:
     if int(key)+1 < 2018:
-        cpi_dictionary_inflation_year_over_year_1954_to_2017[key] = cpi_dictionary_inflation_year_over_year_1954_to_2017.get(str(int(key)+1))
+        cpi_dictionary_inflation_year_over_year_1955_to_2018[key] = cpi_dictionary_inflation_year_over_year_1954_to_2017.get(str(int(key)+1))
     else:
-        cpi_dictionary_inflation_year_over_year_1954_to_2017[key] = 2.43899951453
+        cpi_dictionary_inflation_year_over_year_1955_to_2018[key] = 2.43899951453
 
 def get_cleaned_cpi_data():
     return cpi_dictionary_inflation_year_over_year_1954_to_2017
 
 def get_clean_cpi_data_next_year_prediction():
-    return cpi_dictionary_inflation_year_over_year_1954_to_2017
+    return cpi_dictionary_inflation_year_over_year_1955_to_2018
 
 
