@@ -46,7 +46,3 @@ for i in range(1, len(years_to_keep)):
 # return cleaned gdp data
 def get_cleaned_gdp_data():
     return gdp_growth_data_usa_official_dictionary_average_1954_to_2017
-
-# print(years_to_keep)
-
-# print(gdp_growth_data_usa_official_dictionary_average_1954_to_2017)

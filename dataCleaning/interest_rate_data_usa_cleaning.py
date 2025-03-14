@@ -1,9 +1,6 @@
 # general imports
 import csv
 
-# google colab import
-# import matplotlib.pyplot as plt
-
 # open csv file
 interest_rate_data_usa_csv_file = open("csvFiles/interest_rate_data_usa.csv", "r")
 
@@ -39,24 +36,3 @@ for key in interest_rate_dictionary_count:
 
 def get_cleaned_interest_rate_data():
     return interest_rate_dictionary_average
-
-# testing
-# print(interest_rate_dictionary_sum)
-# print("Separator")
-# print(interest_rate_dictionary_count)
-# print("Separator")
-# print(interest_rate_dictionary_average)
-
-# visualization in google colab
-# names = list(interest_rate_dictionary_average.keys())
-# values = list(interest_rate_dictionary_average.values())
-
-# fig, ax = plt.subplots()
-
-# plt.title("Average effective federal funds rate by year")
-# plt.ylabel("Average effective federal funds rate")
-# plt.xlabel("Year")
-# ax.bar(names, values)
-# ax.tick_params(axis="x", labelrotation = 90)
-# fig.set_figwidth(15)
-# plt.show()
